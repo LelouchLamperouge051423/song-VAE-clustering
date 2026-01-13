@@ -1,0 +1,12 @@
+dali-dataset
+yt-dlp
+librosa
+soundfile
+pandas
+tqdm
+numpy
+torch
+scikit-learn
+matplotlib
+seaborn
+umap-learn

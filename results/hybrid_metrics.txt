@@ -1,0 +1,8 @@
+Method               | Algorithm       | Sil score  | DB Index   | ARI       
+--------------------------------------------------------------------------------
+Audio                | KMeans          | 0.0874     | 2.9408     | 0.0001    
+Audio                | Agglomerative   | 0.0964     | 3.1620     | -0.0059   
+Audio                | DBSCAN          | 0.2619     | 8.6253     | -0.0024   
+Hybrid               | KMeans          | 0.0417     | 4.5797     | 0.0004    
+Hybrid               | Agglomerative   | 0.0616     | 3.0632     | -0.0160   
+Hybrid               | DBSCAN          | 0.1269     | 2.2487     | 0.0959    
