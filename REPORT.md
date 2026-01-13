@@ -265,17 +265,17 @@ NMI and ARI values near zero indicate:
 
 #### 5.3.1 Latent Space Structure (t-SNE Visualizations)
 
-![VAE Latent Space](vae_latent_gt.png)
+![VAE Latent Space](results/latent_visualization/vae_latent_gt.png)
 *Figure 1: t-SNE projection of VAE latent space colored by ground truth language (Blue=English, Red=Bangla)*
 
 **Observation:** The two languages form overlapping clusters with no clear decision boundary, confirming the quantitative results.
 
-![Autoencoder Latent Space](autoencoder_latent_gt.png)
+![Autoencoder Latent Space](results/latent_visualization/autoencoder_latent_gt.png)
 *Figure 2: Autoencoder latent space shows slightly better separation than VAE*
 
 #### 5.3.2 Training Convergence
 
-![VAE Loss Curves](vae_loss.png)
+![VAE Loss Curves](results/latent_visualization/vae_loss.png)
 *Figure 3: VAE training loss steadily decreases over 10 epochs*
 
 All models converged smoothly without overfitting, indicating:
@@ -285,14 +285,14 @@ All models converged smoothly without overfitting, indicating:
 
 #### 5.3.3 Reconstruction Quality
 
-![CVAE Reconstructions](cvae_reconstructions.png)
+![CVAE Reconstructions](results/latent_visualization/cvae_reconstructions.png)
 *Figure 4: Original vs reconstructed MFCC spectrograms (4 examples)*
 
 **Observation:** Reconstructions preserve global MFCC structure but lose fine-grained details, which is expected for VAE models.
 
 #### 5.3.4 Cluster Distribution
 
-![Cluster Distribution](vae_cluster_dist.png)
+![Cluster Distribution](results/latent_visualization/vae_cluster_dist.png)
 *Figure 5: Bar chart showing language composition per cluster*
 
 Both clusters contain roughly equal proportions of English and Bangla, confirming poor separation.
