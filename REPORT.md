@@ -297,6 +297,49 @@ All models converged smoothly without overfitting, indicating:
 
 Both clusters contain roughly equal proportions of English and Bangla, confirming poor separation.
 
+
+#### 5.3.5 Clustering Results Comparison
+
+**All Methods - Predicted Clusters:**
+
+![CVAE Clusters](results/latent_visualization/cvae_latent_cluster.png)
+*Figure 6: CVAE clustering results (Silhouette: 0.0179)*
+
+![Beta-VAE Clusters](results/latent_visualization/beta-vae_latent_cluster.png)
+*Figure 7: Beta-VAE clustering results (Silhouette: 0.0190)*
+
+![Autoencoder Clusters](results/latent_visualization/autoencoder_latent_cluster.png)
+*Figure 8: Autoencoder clustering results (Silhouette: **0.1324** - Best performance)*
+
+![Multi-Modal Clusters](results/latent_visualization/multimodal_latent.png)
+*Figure 9: Multi-modal fusion results (NMI: **0.0333** - Best NMI)*
+
+**Cluster Distribution Comparisons:**
+
+![CVAE Distribution](results/latent_visualization/cvae_cluster_dist.png)
+*Figure 10: CVAE cluster distribution*
+
+![Beta-VAE Distribution](results/latent_visualization/beta-vae_cluster_dist.png)
+*Figure 11: Beta-VAE cluster distribution*
+
+![Autoencoder Distribution](results/latent_visualization/autoencoder_cluster_dist.png)
+*Figure 12: Autoencoder cluster distribution*
+
+![Multi-Modal Distribution](results/latent_visualization/multimodal_cluster_dist.png)
+*Figure 13: Multi-modal cluster distribution*
+
+**Baseline Comparison:**
+
+![PCA Baseline](results/latent_visualization/pca_latent.png)
+*Figure 14: PCA baseline (Silhouette: 0.0500)*
+
+**Key Observations:**
+- Autoencoder produces most compact, well-separated clusters (Silhouette: 0.1324)
+- Multi-modal fusion improves information-theoretic metrics (NMI: 0.0333)
+- All methods show similar cluster distributions, indicating consistent challenge
+- VAE regularization may over-constrain latent space for clustering tasks
+
+
 ### 5.4 Comparison with Prior Work
 
 Our silhouette score (0.1324) is lower than typicalvalues for well-separated clusters (0.5+), but comparable to other challenging audio classification tasks. The near-random clustering (ARI ≈ 0) suggests this is a fundamentally difficult problem requiring either:
